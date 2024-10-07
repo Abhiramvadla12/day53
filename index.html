@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let add = function (val){
+        //     return new Promise(function (resolve,reject){
+        //        return  resolve(val+5);
+        //     });
+        // }
+        // let sub = function (val){
+        //     return new Promise(function (resolve,reject){
+        //         return resolve(val-5);
+        //     });
+        // }
+        // let mul = function (val){
+        //     return new Promise(function (resolve,reject){
+        //         return resolve(val*4);
+        //     });
+        // }
+        // let div = function (val){
+        //     return new Promise(function (resolve,reject){
+        //         return resolve(val/2);
+        //     });
+        // }
+        // add(5).then(function (addRes){
+        //     return  sub(addRes);
+        // }).then(function (subRes){
+        //     return mul(subRes);
+        // }).then(function (mulRes){
+        //     return div(mulRes);
+        // }).then(function (divRes){
+        //     console.log(divRes);
+        // });
+        // console.log('or -------------------------------------------------------');
+        let add1 =  (val)=>{
+            return new Promise((resolve,reject)=>{
+               return  resolve(val+673);
+               
+            });
+        }
+        let sub1 =  (val)=>{
+            return new Promise((resolve,reject)=>{
+                return resolve(val-99.999);
+            });
+        }
+        let mul1 =  (val)=>{
+            return new Promise((resolve,reject)=>{
+                return resolve(val*25);
+            });
+        }
+        let div1 =  (val)=>{
+            return new Promise((resolve,reject)=>{
+                return resolve(val/8);
+            });
+        }
+        add1(10).then((addRes)=>{
+            return  sub1(addRes);
+        }).then((subRes)=>{
+            return mul1(subRes);
+        }).then((mulRes)=>{
+            return div1(mulRes);
+        }).then((divRes)=>{
+            console.log(divRes);
+        });
+    </script>
+</body>
+</html>
